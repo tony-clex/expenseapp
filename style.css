@@ -150,3 +150,12 @@ td button:hover {
 .summary span {
   font-weight: bold;
 }
+
+@media (max-width: 320px){
+   th,
+td {
+  text-align: center;
+  padding: 2px;
+  border-bottom: 1px solid #9aa6b2;
+} 
+} 

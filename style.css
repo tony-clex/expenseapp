@@ -69,13 +69,13 @@ h2 {
   justify-content: start;
 }
 
-.part-1 h2{
-    text-align: left;
-    margin-bottom: 40px;
+.part-1 h2 {
+  text-align: left;
+  margin-bottom: 40px;
 }
-.part-2 h2{
-    text-align: left;
-    margin-bottom: 40px;
+.part-2 h2 {
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 .expense-button button {
@@ -151,11 +151,21 @@ td button:hover {
   font-weight: bold;
 }
 
-@media (max-width: 320px){
-   th,
-td {
-  text-align: center;
-  padding: 2px;
-  border-bottom: 1px solid #9aa6b2;
-} 
-} 
+@media (max-width: 320px) {
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 22px;
+  }
+  th,
+  td {
+    text-align: center;
+    
+    border-bottom: 1px solid #9aa6b2;
+  }
+}

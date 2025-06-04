@@ -65,13 +65,6 @@ td button {
   font-size: 16px;
 }
 
-
-
-
-td button:hover {
-  background-color: #bcccdc;
-}
-
 .income-button button,
 .clear-button-group button {
   background-color: #6e9dd3;
@@ -85,12 +78,6 @@ td button:hover {
   justify-content: start;
 }
 
-.part-1 h2,
-.part-2 h2 {
-  text-align: left;
-  margin-bottom: 40px;
-}
-
 .expense-button button {
   background-color: #6e9dd3;
   color: white;
@@ -100,6 +87,16 @@ td button:hover {
   cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
+}
+
+td button:hover {
+  background-color: #bcccdc;
+}
+
+.part-1 h2,
+.part-2 h2 {
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 .button-group button:hover,

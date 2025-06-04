@@ -12,7 +12,7 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 10%);
   max-width: 600px;
   width: 100%;
 }
@@ -46,6 +46,15 @@ h2 {
   color: #555;
 }
 
+td button {
+  background-color: #6e9dd3;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 .input-contain input,
 .input-contain select {
   width: calc(100% - 10px);
@@ -54,6 +63,13 @@ h2 {
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
+}
+
+
+
+
+td button:hover {
+  background-color: #bcccdc;
 }
 
 .income-button button,
@@ -86,18 +102,8 @@ h2 {
   margin-top: 20px;
 }
 
-td button {
-  background-color: #6e9dd3;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
 .button-group button:hover,
-.clear-button-group button:hover,
-td button:hover {
+.clear-button-group button:hover {
   background-color: #bcccdc;
 }
 

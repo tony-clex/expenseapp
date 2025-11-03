@@ -68,7 +68,6 @@ td button {
   border-radius: 3px;
 }
 
-/* 3️⃣ Class-based buttons */
 .income-button button,
 .expense-button button,
 .clear-button-group button {
@@ -125,7 +124,6 @@ td {
   color: #333;
 }
 
-/* Account summary */
 .account-summary {
   background-color: #f2f3f4;
   padding: 15px;

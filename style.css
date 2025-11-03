@@ -2,10 +2,11 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
 .container {
@@ -14,11 +15,12 @@ body {
   border-radius: 10px;
   max-width: 600px;
   width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.flex {
-  display: flex;
-  justify-content: space-between;
+h1, h2 {
+  color: #333;
+  text-align: center;
 }
 
 h1 {
@@ -29,12 +31,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-h1,
-h2 {
-  color: #333;
-  text-align: center;
-}
-
 .input-contain {
   margin-bottom: 15px;
 }
@@ -43,20 +39,12 @@ h2 {
   display: block;
   margin-bottom: 5px;
   color: #555;
-}
-
-td button {
-  background-color: #6e9dd3;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-  cursor: pointer;
+  font-size: 14px;
 }
 
 .input-contain input,
 .input-contain select {
-  width: calc(100% - 10px);
+  width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -64,60 +52,45 @@ td button {
   font-size: 16px;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.2s ease-in-out;
+}
+
 .income-button button,
+.expense-button button,
 .clear-button-group button {
   background-color: #6e9dd3;
   color: white;
-  border: none;
   padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
-  justify-content: start;
+  margin-top: 10px;
+  width: 100%;
 }
 
-.expense-button button {
-  background-color: #6e9dd3;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
-}
-
-td button:hover {
-  background-color: #bcccdc;
-}
-
-.part-1 h2,
-.part-2 h2 {
-  text-align: left;
-  margin-bottom: 40px;
-}
-
-.button-group button:hover,
-.clear-button-group button:hover {
+button:hover {
   background-color: #bcccdc;
 }
 
 .table-container {
   margin-top: 20px;
+  overflow-x: auto; 
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  min-width: 400px; 
 }
 
-th,
-td {
+th, td {
   text-align: center;
   padding: 10px;
   border-bottom: 1px solid #9aa6b2;
+  word-wrap: break-word;
 }
 
 th {
@@ -127,6 +100,17 @@ th {
 
 td {
   color: #333;
+}
+
+td button {
+  background-color: #6e9dd3;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+td button:hover {
+  background-color: #bcccdc;
 }
 
 .account-summary {
@@ -146,20 +130,105 @@ td {
   font-weight: bold;
 }
 
-@media (max-width: 320px) {
+.flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+@media (max-width: 768px) {
   body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0 22px 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
   }
 
-  th,
-  td {
-    text-align: center;
-    border-bottom: 1px solid #9aa6b2;
+  .container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .input-contain input,
+  .input-contain select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .income-button button,
+  .expense-button button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  td button {
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .container {
+    padding: 15px;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  table {
+    font-size: 13px;
+    min-width: 350px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .income-button button,
+  .expense-button button,
+  .clear-button-group button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    padding: 5px;
+  }
+
+  table {
+    font-size: 12px;
+    min-width: 300px;
+  }
+
+  td, th {
+    padding: 6px;
+  }
+
+  .summary p {
+    font-size: 16px;
   }
 }

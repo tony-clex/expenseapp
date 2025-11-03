@@ -168,21 +168,22 @@ td {
     padding: 8px;
   }
 
+  td button {
+   padding: 4px 8px;
+  }
+
+
   .income-button button,
   
   table {
     font-size: 14px;
   }
 
-  td button {
-    padding: 4px 8px;
-  }
-
+  
   .expense-button button {
     font-size: 14px;
     padding: 8px 15px;
   }
-
 }
 
 @media (max-width: 480px) {

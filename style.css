@@ -15,7 +15,7 @@ body {
   border-radius: 10px;
   max-width: 600px;
   width: 100%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 }
 
 h1,
@@ -61,6 +61,18 @@ button {
   transition: background-color 0.2s ease-in-out;
 }
 
+/* Move td button BEFORE other button selectors */
+td button {
+  background-color: #6e9dd3;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+td button:hover {
+  background-color: #bcccdc;
+}
+
 .income-button button,
 .expense-button button,
 .clear-button-group button {
@@ -104,17 +116,6 @@ td {
   color: #333;
 }
 
-td button {
-  background-color: #6e9dd3;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 3px;
-}
-
-td button:hover {
-  background-color: #bcccdc;
-}
-
 .account-summary {
   background-color: #f2f3f4;
   padding: 15px;
@@ -138,7 +139,6 @@ td button:hover {
   gap: 10px;
   flex-wrap: wrap;
 }
-
 
 @media (max-width: 768px) {
   body {
@@ -184,6 +184,7 @@ td button:hover {
     padding: 10px;
     align-items: flex-start;
   }
+
   .container {
     padding: 15px;
     width: 100%;

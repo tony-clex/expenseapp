@@ -78,7 +78,6 @@ td button {
   width: 100%;
 }
 
-
 td button:hover {
   background-color: #547fb2;
   transform: scale(1.03);
@@ -170,11 +169,7 @@ td {
   }
 
   .income-button button,
-  .expense-button button {
-    font-size: 14px;
-    padding: 8px 15px;
-  }
-
+  
   table {
     font-size: 14px;
   }
@@ -182,6 +177,12 @@ td {
   td button {
     padding: 4px 8px;
   }
+
+  .expense-button button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
 }
 
 @media (max-width: 480px) {

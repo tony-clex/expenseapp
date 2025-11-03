@@ -61,7 +61,6 @@ button {
   transition: background-color 0.2s ease-in-out;
 }
 
-/* Move td button BEFORE other button selectors */
 td button {
   background-color: #6e9dd3;
   color: white;
@@ -69,7 +68,7 @@ td button {
   border-radius: 3px;
 }
 
-td button:hover {
+button:hover {
   background-color: #bcccdc;
 }
 
@@ -83,7 +82,7 @@ td button:hover {
   width: 100%;
 }
 
-button:hover {
+td button:hover {
   background-color: #bcccdc;
 }
 
@@ -164,6 +163,14 @@ td {
     padding: 8px;
   }
 
+  button {}
+
+  td button {
+    padding: 4px 8px;
+  }
+
+  button:hover {}
+
   .income-button button,
   .expense-button button {
     font-size: 14px;
@@ -172,10 +179,6 @@ td {
 
   table {
     font-size: 14px;
-  }
-
-  td button {
-    padding: 4px 8px;
   }
 }
 

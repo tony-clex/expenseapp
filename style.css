@@ -18,7 +18,8 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #333;
   text-align: center;
 }
@@ -76,17 +77,18 @@ button:hover {
 
 .table-container {
   margin-top: 20px;
-  overflow-x: auto; 
+  overflow-x: auto;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
-  min-width: 400px; 
+  min-width: 400px;
 }
 
-th, td {
+th,
+td {
   text-align: center;
   padding: 10px;
   border-bottom: 1px solid #9aa6b2;
@@ -182,7 +184,6 @@ td button:hover {
     padding: 10px;
     align-items: flex-start;
   }
-
   .container {
     padding: 15px;
     width: 100%;
@@ -224,7 +225,8 @@ td button:hover {
     min-width: 300px;
   }
 
-  td, th {
+  td,
+  th {
     padding: 6px;
   }
 

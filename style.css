@@ -53,14 +53,16 @@ h2 {
   font-size: 16px;
 }
 
+/* 1️⃣ Base button style */
 button {
   cursor: pointer;
   border: none;
   border-radius: 5px;
   font-size: 16px;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
+/* 2️⃣ Table (delete) buttons */
 td button {
   background-color: #6e9dd3;
   color: white;
@@ -68,10 +70,13 @@ td button {
   border-radius: 3px;
 }
 
+/* 3️⃣ General hover (applies to most buttons) */
 button:hover {
-  background-color: #bcccdc;
+  background-color: #547fb2;
+  transform: scale(1.03);
 }
 
+/* 4️⃣ Income, Expense, Clear buttons */
 .income-button button,
 .expense-button button,
 .clear-button-group button {
@@ -82,10 +87,21 @@ button:hover {
   width: 100%;
 }
 
-td button:hover {
-  background-color: #bcccdc;
+/* 5️⃣ Hover for Income, Expense, Clear buttons */
+.income-button button:hover,
+.expense-button button:hover,
+.clear-button-group button:hover {
+  background-color: #547fb2;
+  transform: scale(1.03);
 }
 
+/* 6️⃣ Hover for Delete button (kept same color tone) */
+td button:hover {
+  background-color: #547fb2;
+  transform: scale(1.03);
+}
+
+/* 🧾 Tables */
 .table-container {
   margin-top: 20px;
   overflow-x: auto;
@@ -115,6 +131,7 @@ td {
   color: #333;
 }
 
+/* 📊 Summary box */
 .account-summary {
   background-color: #f2f3f4;
   padding: 15px;
@@ -132,6 +149,7 @@ td {
   font-weight: bold;
 }
 
+/* 🔧 Flex utility */
 .flex {
   display: flex;
   justify-content: space-between;
@@ -139,6 +157,7 @@ td {
   flex-wrap: wrap;
 }
 
+/* 📱 Responsive design */
 @media (max-width: 768px) {
   body {
     padding: 10px;
@@ -163,14 +182,6 @@ td {
     padding: 8px;
   }
 
-  button {}
-
-  td button {
-    padding: 4px 8px;
-  }
-
-  button:hover {}
-
   .income-button button,
   .expense-button button {
     font-size: 14px;
@@ -179,6 +190,10 @@ td {
 
   table {
     font-size: 14px;
+  }
+
+  td button {
+    padding: 4px 8px;
   }
 }
 

@@ -172,8 +172,7 @@ td {
     padding: 4px 8px;
   }
 
-.income-button button,
-
+  .income-button button,
   table {
     font-size: 14px;
   }
@@ -239,5 +238,4 @@ td {
   .summary p {
     font-size: 16px;
   }
-
 }

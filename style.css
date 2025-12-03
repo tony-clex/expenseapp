@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -13,24 +13,23 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  max-width: 600px;
   width: 100%;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 h1,
 h2 {
   color: #333;
   text-align: center;
+  margin-bottom: 15px;
 }
 
-h1 {
+.input-section {
   margin-bottom: 20px;
 }
 
-h2 {
-  margin-bottom: 15px;
-}
 
 .input-contain {
   margin-bottom: 15px;
@@ -40,25 +39,60 @@ h2 {
   display: block;
   margin-bottom: 5px;
   color: #555;
-  font-size: 14px;
 }
 
-.input-contain input,
-.input-contain select {
+.input-contain input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  box-sizing: border-box;
   font-size: 16px;
 }
+
 
 button {
   cursor: pointer;
   border: none;
   border-radius: 5px;
   font-size: 16px;
-  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+#add-btn,
+.clear-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #6e9dd3;
+  color: white;
+  margin-top: 10px;
+}
+
+#add-btn:hover,
+.clear-btn:hover {
+  background-color: #547fb2;
+}
+
+
+.table-container {
+  margin-top: 25px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #9aa6b2;
+}
+
+th {
+  background-color: #c9d4e0;
+  color: white;
 }
 
 td button {
@@ -68,130 +102,38 @@ td button {
   border-radius: 3px;
 }
 
-.income-button button,
-.expense-button button,
-.clear-button-group button {
-  background-color: #6e9dd3;
-  color: white;
-  padding: 10px 20px;
-  margin-top: 10px;
-  width: 100%;
-}
-
 td button:hover {
   background-color: #547fb2;
-  transform: scale(1.03);
 }
 
-.income-button button:hover,
-.expense-button button:hover,
-.clear-button-group button:hover {
-  background-color: #547fb2;
-  transform: scale(1.03);
+
+.amount-income {
+  color: green;
+  font-weight: bold;
 }
 
-.table-container {
-  margin-top: 20px;
-  overflow-x: auto;
+.amount-expense {
+  color: red;
+  font-weight: bold;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  min-width: 400px;
-}
-
-th,
-td {
-  text-align: center;
-  padding: 10px;
-  border-bottom: 1px solid #9aa6b2;
-  word-wrap: break-word;
-}
-
-th {
-  background-color: #c9d4e0;
-  color: white;
-}
-
-td {
-  color: #333;
-}
 
 .account-summary {
   background-color: #f2f3f4;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
-  color: #333;
+  margin-top: 20px;
 }
 
-.summary p {
-  margin: 10px 0;
-  font-size: 18px;
-}
 
-.summary span {
-  font-weight: bold;
-}
-
-.flex {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 350px) {
   body {
     padding: 10px;
   }
 
   .container {
-    max-width: 90%;
     padding: 15px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  .input-contain input,
-  .input-contain select {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  td button {
-    padding: 4px 8px;
-  }
-
-  .income-button button,
-  table {
-    font-size: 14px;
-  }
-
-  .expense-button button {
-    font-size: 14px;
-    padding: 8px 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 10px;
-    align-items: flex-start;
-  }
-
-  .container {
-    padding: 15px;
-    width: 100%;
-    box-shadow: none;
   }
 
   h1 {
@@ -202,39 +144,49 @@ td {
     font-size: 16px;
   }
 
-  table {
-    font-size: 13px;
-    min-width: 350px;
-  }
-
-  .flex {
-    flex-direction: column;
-  }
-
-  .income-button button,
-  .expense-button button,
-  .clear-button-group button {
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 320px) {
-  body {
-    padding: 5px;
+  .input-contain input {
+    padding: 10px;
+    font-size: 14px;
   }
 
   table {
     font-size: 12px;
-    min-width: 300px;
   }
 
-  td,
-  th {
-    padding: 6px;
+  td button {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 18px;
   }
 
-  .summary p {
-    font-size: 16px;
+  table {
+    font-size: 14px;
+    min-width: 350px;
+  }
+
+  .input-contain input {
+    font-size: 15px;
+  }
+
+  #add-btn,
+  .clear-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  table {
+    font-size: 15px;
   }
 }

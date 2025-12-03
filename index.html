@@ -5,96 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
+    <div class="container">
+        <h1>Expense Tracker</h1>
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Expense Tracker App</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-
-    <body>
-        <div class="container">
-            <h1>Expense Tracker</h1>
-            <div class="flex">
-                <div class="part-1">
-                    <h2>Income</h2>
-                    <div class="input-contain">
-                        <label for="income-description">Description</label>
-                        <input type="text" id="income-description" placeholder="Salary" />
-                    </div>
-                    <div class="input-contain">
-                        <label for="income-amount">Amount CFA</label>
-                        <input type="number" id="income-amount" placeholder="100000" />
-                    </div>
-                    <div class="income-button">
-                        <button onclick="addIncome()">Add Income</button>
-                    </div>
-                </div>
-
-                <div class="part-2">
-                    <h2>Expenses</h2>
-                    <div class="input-contain">
-                        <label for="expense-description">Description</label>
-                        <input type="text" id="expense-description" placeholder="text" />
-                    </div>
-                    <div class="input-contain">
-                        <label for="expense-category">Category</label>
-                        <select id="expense-category">
-                            <option value="Food">Food</option>
-                            <option value="Housing">Housing</option>
-                            <option value="Transportation">Transprtation</option>
-                            <option value="Entertainment">Entertainment</option>
-                            <option value="Others">Others</option>
-                        </select>
-                    </div>
-                    <div class="input-contain">
-                        <label for="expense-amount">Amount </label>
-                        <input type="number" id="expense-amount" placeholder="20000" />
-                    </div>
-                    <div class="expense-button">
-                        <button onclick="addExpense()">Add Expense</button>
-                    </div>
-                </div>
+        <div class="input-section">
+            <div class="input-contain">
+                <label for="description">Description</label>
+                <input type="text" id="description" placeholder="Salary, Groceries, etc.">
             </div>
 
-            <div class="table-container">
-                <h2>Transaction History</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Category</th>
-                            <th>Amount</th>
-                            <th>Type</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="transaction-list"></tbody>
-                </table>
+            <div class="input-contain">
+                <label for="amount">Amount (use negative for expenses)</label>
+                <input type="number" id="amount" placeholder="10000 or -5000">
             </div>
 
-            <div class="account-summary">
-                <h2>Budget Summary</h2>
-                <p>Total Income: <span id="total-income">0</span></p>
-                <p>Total Expenses: <span id="total-expenses">0</span></p>
-                <p>Balance: <span id="balance">0</span></p>
-            </div>
-
-            <div class="clear-button-group">
-                <button onclick="clearAll()">Clear All</button>
-            </div>
+            <button id="add-btn">Add Transaction</button>
         </div>
-        <script src="main.js"></script>
-    </body>
 
-    </html>
+        <div class="table-container">
+            <h2>Transaction History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-list"></tbody>
+            </table>
+        </div>
 
+        <div class="account-summary">
+            <h2>Budget Summary</h2>
+            <p>Total Income: <span id="total-income">0</span></p>
+            <p>Total Expenses: <span id="total-expenses">0</span></p>
+            <p>Balance: <span id="balance">0</span></p>
+        </div>
+
+        <button class="clear-btn" onclick="clearAll()">Clear All</button>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>

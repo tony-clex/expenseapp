@@ -6,29 +6,29 @@ document.addEventListener('DOMContentLoaded', function () {
   const totalExpensesDisplay = document.getElementById('total-expenses')
   const balanceDisplay = document.getElementById('balance')
 
-  function getTransactions() {
+  function getTransactions () {
     return JSON.parse(localStorage.getItem('transactions') || '[]')
   }
 
-  function saveTransactions(transactions) {
+  function saveTransactions (transactions) {
     localStorage.setItem('transactions', JSON.stringify(transactions))
   }
 
-  function addTransaction(transaction) {
+  function addTransaction (transaction) {
     const transactions = getTransactions()
     transactions.push(transaction)
     saveTransactions(transactions)
     renderTransactions()
   }
 
-  function deleteTransaction(index) {
+  function deleteTransaction (index) {
     const transactions = getTransactions()
     transactions.splice(index, 1)
     saveTransactions(transactions)
     renderTransactions()
   }
 
-  function renderTransactions() {
+  function renderTransactions () {
     const transactions = getTransactions()
     transactionList.innerHTML = ''
 

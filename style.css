@@ -15,9 +15,8 @@ body {
   border-radius: 10px;
   width: 100%;
   max-width: 600px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 }
-
 
 h1,
 h2 {
@@ -29,7 +28,6 @@ h2 {
 .input-section {
   margin-bottom: 20px;
 }
-
 
 .input-contain {
   margin-bottom: 15px;
@@ -48,7 +46,6 @@ h2 {
   border-radius: 5px;
   font-size: 16px;
 }
-
 
 button {
   cursor: pointer;
@@ -70,7 +67,6 @@ button {
 .clear-btn:hover {
   background-color: #547fb2;
 }
-
 
 .table-container {
   margin-top: 25px;
@@ -106,7 +102,6 @@ td button:hover {
   background-color: #547fb2;
 }
 
-
 .amount-income {
   color: green;
   font-weight: bold;
@@ -117,7 +112,6 @@ td button:hover {
   font-weight: bold;
 }
 
-
 .account-summary {
   background-color: #f2f3f4;
   padding: 15px;
@@ -125,7 +119,6 @@ td button:hover {
   text-align: center;
   margin-top: 20px;
 }
-
 
 @media (max-width: 350px) {
   body {

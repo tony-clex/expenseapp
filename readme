@@ -1,0 +1,65 @@
+## Project Title 
+EXPENSEAPP
+
+
+### Project Description
+A user-friendly expense management app designed to help you understand where your money goes. The app lets you log expenses, assign categories, edit or delete entries, and view total spending in real time. With a clean interface and local data storage, it’s perfect for everyday budgeting and personal finance tracking.
+
+
+### Features
+
+Add, Edit & Delete Expenses — Quickly manage your transactions.
+
+Categorized Spending — Tag expenses by category for better insights.
+
+Local Storage Support — Your data stays saved in the browser.
+
+Responsive UI — Works smoothly on desktop and mobile.
+
+Summary & Filters
+
+Total Spending
+
+Category-wise breakdown
+
+Date filters
+
+ Tech Stack
+
+Frontend: HTML, CSS, JavaScript
+
+Storage: Browser LocalStorage (or update this if your stack is different)
+
+📦 Installation & Setup
+# Clone the repository
+git clone https://github.com/tony-clex/expenseapp.git 
+
+# Navigate into the project
+cd expenseapp
+
+# Open the project
+open index.html  # or manually open in a browser
+
+
+If you’re running it with a dev server:
+
+npm install
+npm start
+
+ Usage
+
+Enter an amount, description, and category.
+
+Click Add Expense.
+
+Your expense appears in the list.
+
+Use delete/edit buttons to modify entries.
+
+View total and filtered summaries at the top.
+
+📁 Project Structure (example)
+/EXPENSEAPP
+|── index.html
+|── style.css
+|── main.js

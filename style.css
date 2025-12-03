@@ -143,7 +143,6 @@ td {
   flex-wrap: wrap;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   body {
     padding: 10px;

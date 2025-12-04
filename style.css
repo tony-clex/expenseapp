@@ -72,6 +72,14 @@ button {
   background-color: rgb(84 127 178 / 100%);
 }
 
+td button {
+  background-color: rgb(110 157 211 / 100%);
+  color: rgb(255 255 255 / 100%);
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
 .modal-buttons button {
   padding: 10px 20px;
   border: none;
@@ -119,14 +127,6 @@ td {
 th {
   background-color: rgb(201 212 224 / 100%);
   color: rgb(255 255 255 / 100%);
-}
-
-td button {
-  background-color: rgb(110 157 211 / 100%);
-  color: rgb(255 255 255 / 100%);
-  padding: 5px 10px;
-  border-radius: 3px;
-  font-size: 14px;
 }
 
 td button:hover {

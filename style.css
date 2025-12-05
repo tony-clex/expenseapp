@@ -1,0 +1,284 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(244 244 244 / 100%);
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: rgb(255 255 255 / 100%);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+h1,
+h2 {
+  color: rgb(51 51 51 / 100%);
+  text-align: center;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input-contain {
+  margin-bottom: 15px;
+}
+
+.input-contain label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgb(85 85 85 / 100%);
+  font-size: 14px;
+}
+
+.input-contain input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(221 221 221 / 100%);
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.25s;
+}
+
+#add-btn,
+.clear-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(110 157 211 / 100%);
+  color: rgb(255 255 255 / 100%);
+  margin-top: 10px;
+}
+
+#add-btn:hover,
+.clear-btn:hover {
+  background-color: rgb(84 127 178 / 100%);
+}
+
+td button {
+  background-color: rgb(110 157 211 / 100%);
+  color: rgb(255 255 255 / 100%);
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.25s ease;
+}
+
+#confirm-no {
+  background-color: rgb(0 128 0 / 100%);
+}
+
+#confirm-yes {
+  background-color: rgb(255 0 0 / 100%);
+}
+
+#confirm-no:hover {
+  background-color: rgb(0 100 0 / 100%);
+}
+
+#confirm-yes:hover {
+  background-color: rgb(139 0 0 / 100%);
+}
+
+.table-container {
+  margin-top: 25px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid rgb(154 166 178 / 100%);
+  word-break: break-word;
+}
+
+th {
+  background-color: rgb(201 212 224 / 100%);
+  color: rgb(255 255 255 / 100%);
+}
+
+td button:hover {
+  background-color: rgb(84 127 178 / 100%);
+}
+
+.amount-income {
+  color: green;
+  font-weight: bold;
+}
+
+.amount-expense {
+  color: red;
+  font-weight: bold;
+}
+
+.account-summary {
+  background-color: rgb(242 243 244 / 100%);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: rgb(255 255 255 / 100%);
+  font-weight: bold;
+  min-width: 250px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slide-in 0.3s forwards, fade-out 0.5s forwards 50%;
+}
+
+.toast-success {
+  background-color: green;
+}
+
+.toast-error {
+  background-color: red;
+}
+
+.toast-info {
+  background-color: rgb(110 157 211 / 100%);
+}
+
+@keyframes slide-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: rgb(255 255 255 / 100%);
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 20%);
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: rgb(51 51 51 / 100%);
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+    padding: 18px;
+  }
+
+  table {
+    font-size: 15px;
+    min-width: 300px;
+  }
+
+  .input-contain input {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  #add-btn,
+  .clear-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 14px;
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .input-contain input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  td button {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+}

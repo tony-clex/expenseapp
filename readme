@@ -35,7 +35,7 @@ Storage: Browser LocalStorage (or update this if your stack is different)
 git clone https://github.com/tony-clex/expenseapp.git 
 
 # Navigate into the project
-cd expenseapp
+cd expenseapp 
 
 # Open the project
 open index.html  # or manually open in a browser
